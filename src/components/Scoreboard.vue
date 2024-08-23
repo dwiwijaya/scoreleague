@@ -150,13 +150,13 @@ function resetGame() {
       <div
         class="flex gap-4 items-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 bg-slate-50 w-fit rounded-xl h-10 px-4">
         <button class="flex gap-1 items-center text-slate-700" @click="undo">
-          <i class="fal fa-lg fa-rotate-left"></i></button>
+          <i class="active:scale-90 fal fa-lg fa-rotate-left"></i></button>
         <button class="flex gap-1 items-center text-slate-700" @click="flipPositions">
-          <i class="fal fa-lg fa-arrow-up-arrow-down"></i></button>
+          <i class="active:scale-90 fal fa-lg fa-arrow-up-arrow-down"></i></button>
         <button class="flex gap-1 items-center text-slate-700" @click="resetScores">
-          <i class="fal fa-lg fa-rotate"></i></button>
+          <i class="active:scale-90 fal fa-lg fa-rotate"></i></button>
         <button class="flex gap-1 items-center text-slate-700" @click="showSettings = true">
-          <i class="fal fa-lg fa-gear"></i></button>
+          <i class="active:scale-90 fal fa-lg fa-gear"></i></button>
       </div>
 
       <!-- Player 2 -->
@@ -186,7 +186,7 @@ function resetGame() {
       <div class="flex items-center">
         <input v-model="currentName" class="border p-2 w-full rounded-l-lg" />
         <button @click="saveName" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg">
-          <div class="fa-xs fal fa-pen"></div>
+          <i class="active:scale-90 fa-xs fal fa-pen"></i>
         </button>
       </div>
     </div>
@@ -208,9 +208,9 @@ function resetGame() {
             Score to win
           </label>
           <div class="flex gap-2 items-center">
-            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxScore--"><i class="fal fa-minus"></i></button>
+            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxScore--"><i class="active:scale-90 fal fa-minus"></i></button>
             <span class="w-5 text-center">{{ maxScore }}</span>
-            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxScore++"><i class="fal fa-plus"></i></button>
+            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxScore++"><i class="active:scale-90 fal fa-plus"></i></button>
           </div>
         </li>
         <li class="flex justify-between border-b py-2 gap-8">
@@ -221,15 +221,15 @@ function resetGame() {
             Round of game
           </label>
           <div class="flex gap-2 items-center">
-            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxRound--"><i class="fal fa-minus"></i></button>
+            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxRound--"><i class="active:scale-90 fal fa-minus"></i></button>
             <span class="w-5 text-center">{{ maxRound }}</span>
-            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxRound++"><i class="fal fa-plus"></i></button>
+            <button class="bg-gray-200 px-2 py-0 rounded" @click="maxRound++"><i class="active:scale-90 fal fa-plus"></i></button>
           </div>
         </li>
         <li class="flex justify-between border-b py-2 gap-8">
           <label class="flex items-center gap-2">
             <div class="text-center rounded-md bg-slate-200 px-2 w-8">
-              <i class="fal fa-sm fa-asterisk"></i>
+              <i class="active:scale-90 fal fa-sm fa-asterisk"></i>
             </div>
             Enable deuce
           </label>
@@ -247,7 +247,7 @@ function resetGame() {
         <i class="fad fa-trophy text-orange-500"></i>{{ medalsPlayerOne > medalsPlayerTwo ? playerOne : playerTwo }} wins
         the game!
       </p>
-      <button @click="resetGame" class="bg-green-500 text-white px-4 py-2 rounded-lg">Play Again</button>
+      <button @click="resetGame" class="bg-green-500 text-white px-4 py-2 rounded-lg active:scale-90">Play Again</button>
     </div>
   </div>
 </template>
