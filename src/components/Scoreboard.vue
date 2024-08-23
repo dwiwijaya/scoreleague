@@ -132,7 +132,7 @@ function resetGame() {
   <div class="flex items-center justify-center h-[100svh]" :class="[showSettings || winnerModal ? 'blur-md' : '']">
     <div class="h-full w-full sm:w-[40rem] sm:h-[40rem] flex flex-col relative">
       <!-- Player 1 -->
-      <div :class="[colorPlayerOne, 'flex-1 flex items-center justify-center sm:rounded-t-xl']"
+      <div :class="[colorPlayerOne, 'flex-1 flex items-center justify-center sm:rounded-t-3xl']"
         @click="incrementScore('one')">
         <div class="absolute top-8 bg-slate-100 rounded-xl px-4 py-2 flex gap-2 items-center group">
           {{ playerOne }}
@@ -160,7 +160,7 @@ function resetGame() {
       </div>
 
       <!-- Player 2 -->
-      <div :class="[colorPlayerTwo, 'flex-1 flex items-center justify-center sm:rounded-b-xl']"
+      <div :class="[colorPlayerTwo, 'flex-1 flex items-center justify-center sm:rounded-b-3xl']"
         @click="incrementScore('two')">
         <h1 class="text-white text-4xl">{{ scorePlayerTwo }}</h1>
         <div class="absolute bottom-8 bg-slate-100 rounded-xl px-4 py-2 flex gap-2 items-center group">
