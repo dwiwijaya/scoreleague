@@ -128,7 +128,7 @@ function resetGame() {
 
 
 <template>
-  <Confetti v-if="winnerModal"/>
+  <Confetti v-if="winnerModal" />
   <div class="flex items-center justify-center h-[100svh]" :class="[showSettings || winnerModal ? 'blur-md' : '']">
     <div class="h-full w-full sm:w-[40rem] sm:h-[40rem] flex flex-col relative">
       <!-- Player 1 -->
@@ -148,13 +148,15 @@ function resetGame() {
 
       <!-- Control Buttons -->
       <div
-        class="flex gap-4 items-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 bg-slate-50 w-fit rounded-2xl h-10 px-4">
-        <button class="flex gap-1 items-center text-slate-700" @click="undo"><i class="fal fa-rotate-left"></i></button>
-        <button class="flex gap-1 items-center text-slate-700" @click="flipPositions"><i
-            class="fal fa-arrow-up-arrow-down"></i></button>
-        <button class="flex gap-1 items-center text-slate-700" @click="resetScores"><i class="fal fa-rotate"></i></button>
-        <button class="flex gap-1 items-center text-slate-700" @click="showSettings = true"><i
-            class="fal fa-gear"></i></button>
+        class="flex gap-4 items-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 bg-slate-50 w-fit rounded-xl h-10 px-4">
+        <button class="flex gap-1 items-center text-slate-700" @click="undo">
+          <i class="fal fa-lg fa-rotate-left"></i></button>
+        <button class="flex gap-1 items-center text-slate-700" @click="flipPositions">
+          <i class="fal fa-lg fa-arrow-up-arrow-down"></i></button>
+        <button class="flex gap-1 items-center text-slate-700" @click="resetScores">
+          <i class="fal fa-lg fa-rotate"></i></button>
+        <button class="flex gap-1 items-center text-slate-700" @click="showSettings = true">
+          <i class="fal fa-lg fa-gear"></i></button>
       </div>
 
       <!-- Player 2 -->
