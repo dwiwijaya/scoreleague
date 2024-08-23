@@ -86,7 +86,7 @@ function saveName() {
 </script>
 
 <template>
-  <div class="flex items-center justify-center h-[100vh]">
+  <div class="flex items-center justify-center h-[100svh]">
     <div class="h-full w-full sm:w-[40rem] sm:h-[40rem] flex flex-col relative">
       <!-- Bagian Player 1 -->
       <div :class="[colorPlayerOne, 'flex-1 flex items-center justify-center sm:rounded-t-xl']" @click="incrementScore('one')">
