@@ -147,7 +147,7 @@ function resetGame() {
 
       <!-- Control Buttons -->
       <div
-        class="flex gap-4 items-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 bg-slate-100 w-fit rounded-2xl h-10 px-4">
+        class="flex gap-4 items-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 bg-slate-50 w-fit rounded-2xl h-10 px-4">
         <button class="flex gap-1 items-center text-slate-700" @click="undo"><i class="fal fa-rotate-left"></i></button>
         <button class="flex gap-1 items-center text-slate-700" @click="flipPositions"><i
             class="fal fa-arrow-up-arrow-down"></i></button>
@@ -198,7 +198,12 @@ function resetGame() {
       <h2 class="text-lg font-semibold mb-4">Match Settings</h2>
       <ul class="flex flex-col mb-4">
         <li class="flex justify-between border-b py-2 gap-8">
-          <label class="block mb-1">Score to win</label>
+          <label class="flex items-center gap-2">
+            <div class="text-center rounded-md bg-slate-200 px-2 w-8">
+              <i class="fad  fa-star-circle"></i>
+            </div>
+            Score to win
+          </label>
           <div class="flex gap-2 items-center">
             <button class="bg-gray-200 px-2 py-0 rounded" @click="maxScore--"><i class="fal fa-minus"></i></button>
             <span class="w-5 text-center">{{ maxScore }}</span>
@@ -206,7 +211,12 @@ function resetGame() {
           </div>
         </li>
         <li class="flex justify-between border-b py-2 gap-8">
-          <label class="block mb-1">Round of game</label>
+          <label class="flex items-center gap-2">
+            <div class="text-center rounded-md bg-slate-200 px-2 w-8">
+              <i class="fad fa-sm fa-trophy-star"></i>
+            </div>
+            Round of game
+          </label>
           <div class="flex gap-2 items-center">
             <button class="bg-gray-200 px-2 py-0 rounded" @click="maxRound--"><i class="fal fa-minus"></i></button>
             <span class="w-5 text-center">{{ maxRound }}</span>
@@ -214,7 +224,12 @@ function resetGame() {
           </div>
         </li>
         <li class="flex justify-between border-b py-2 gap-8">
-          <label class="block mb-1">Enable deuce</label>
+          <label class="flex items-center gap-2">
+            <div class="text-center rounded-md bg-slate-200 px-2 w-8">
+              <i class="fal fa-sm fa-asterisk"></i>
+            </div>
+            Enable deuce
+          </label>
           <input type="checkbox" v-model="deuceEnabled" />
         </li>
       </ul>
