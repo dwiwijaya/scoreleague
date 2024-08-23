@@ -87,7 +87,7 @@ function saveName() {
 
 <template>
   <div class="flex items-center justify-center h-[100vh]">
-    <div class="h-full w-full sm:w-72 sm:h-72 flex flex-col relative">
+    <div class="h-full w-full sm:w-[40rem] sm:h-[40rem] flex flex-col relative">
       <!-- Bagian Player 1 -->
       <div :class="[colorPlayerOne, 'flex-1 flex items-center justify-center sm:rounded-t-xl']" @click="incrementScore('one')">
         <div class="absolute top-8 bg-slate-100 rounded-xl px-4 py-2 flex gap-2 items-center group">
