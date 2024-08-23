@@ -1,5 +1,4 @@
 <script setup>
-import Confetti from './Confetti.vue';
 import { ref, watch } from 'vue'
 
 const scorePlayerOne = ref(0)
