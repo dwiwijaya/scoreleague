@@ -1,4 +1,5 @@
 <script setup>
+import Confetti from './Confetti.vue';
 import { ref, watch } from 'vue'
 
 const scorePlayerOne = ref(0)
@@ -127,6 +128,7 @@ function resetGame() {
 
 
 <template>
+  <Confetti v-if="winnerModal"/>
   <div class="flex items-center justify-center h-[100svh]" :class="[showSettings || winnerModal ? 'blur-md' : '']">
     <div class="h-full w-full sm:w-[40rem] sm:h-[40rem] flex flex-col relative">
       <!-- Player 1 -->
