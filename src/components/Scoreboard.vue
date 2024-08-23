@@ -114,8 +114,10 @@ function saveName() {
       <!-- Player 1 -->
       <div :class="[colorPlayerOne, 'flex-1 flex items-center justify-center sm:rounded-t-xl']" @click="incrementScore('one')">
         <div class="absolute top-8 bg-slate-100 rounded-xl px-4 py-2 flex gap-2 items-center group">
-          <i v-if="scorePlayerOne > scorePlayerTwo" class="fad fa-crown text-orange-400"></i>
-          {{ playerOne }} ({{ medalsPlayerOne }})
+          {{ playerOne }} 
+          <div class="flex items-center">
+            <i v-for="i in medalsPlayerOne" :key="i" class="fad fa-medal text-orange-400"></i>
+          </div>
           <button @click.stop="openModal('one')" class="hidden group-hover:block">
             <i class="fa-xs fal fa-pen"></i>
           </button>
@@ -135,8 +137,10 @@ function saveName() {
       <div :class="[colorPlayerTwo, 'flex-1 flex items-center justify-center sm:rounded-b-xl']" @click="incrementScore('two')">
         <h1 class="text-white text-4xl">{{ scorePlayerTwo }}</h1>
         <div class="absolute bottom-8 bg-slate-100 rounded-xl px-4 py-2 flex gap-2 items-center group">
-          <i v-if="scorePlayerTwo > scorePlayerOne" class="fad fa-crown text-orange-400"></i>
-          {{ playerTwo }} ({{ medalsPlayerTwo }})
+          {{ playerTwo }} 
+          <div class="flex items-center">
+            <i v-for="i in medalsPlayerTwo" :key="i" class="fad fa-medal text-orange-400"></i>
+          </div>
           <button @click.stop="openModal('two')" class="hidden group-hover:block">
             <i class="fa-xs fal fa-pen"></i>
           </button>
